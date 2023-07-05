@@ -21,19 +21,15 @@ Um den kompletten SyncUser zu bekommen kann man folgenden Code verwenden:
 SyncUser user = subAPI.getUser("value", By.MINECRAFTUUID);
 
 //Twitch-Informationen bekommen
-if(!user.getTwitch().isLoaded()) {
-            user.getTwitch().load(new AsynchroneCallback() {
+
+if(!user.getTwitch().isLoaded()){
+user.getTwitch().load(new AsynchroneCallback() {
                 @Override
                 public void onComplete(Response response) {
-                    user.getTwitch().getUserId();
-                    user.getTwitch().getTier();
-                    user.getTwitch().getDisplayName();
+                    //Actions
                 }
             });
-        } else {
-            user.getTwitch().getUserId();
-            user.getTwitch().getTier();
-            user.getTwitch().getDisplayName();
-        }
+}
+
 ```
 
