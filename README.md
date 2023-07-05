@@ -24,11 +24,11 @@ SyncUser user = subAPI.getUser("value", By.MINECRAFTUUID);
 
 if(!user.getTwitch().isLoaded()){
 user.getTwitch().load(new AsynchroneCallback() {
-                @Override
-                public void onComplete(Response response) {
-                    //Actions
-                }
-            });
+        @Override
+        public void onComplete(Response response) {
+             //Actions
+        }
+    });
 }
 
 ```
