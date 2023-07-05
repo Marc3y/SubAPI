@@ -31,5 +31,20 @@ user.getTwitch().load(new AsynchroneCallback() {
     });
 }
 
+//Discord-Informationen bekommen
+
+if(!user.getDiscord().isLoaded()){
+user.getDiscord().load(new AsynchroneCallback() {
+        @Override
+        public void onComplete(Response response) {
+             //Actions
+        }
+    });
+}
+
+//Minecraft-Informationen bekommen
+//Minecraft muss nicht geladen werden
+user.getMinecraft();
+
 ```
 
