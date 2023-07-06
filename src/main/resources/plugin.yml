@@ -1,4 +1,4 @@
 name: SubAPI
 version: '${project.version}'
-main: de.kenjih.subapi.SubAPI
+main: de.kenjih.subapi.SubAPIMain
 api-version: 1.18

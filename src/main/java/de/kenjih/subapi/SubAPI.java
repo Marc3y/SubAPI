@@ -31,6 +31,7 @@ public class SubAPI {
         this.sqlData.createTable();
         twitchBot = new TwitchBot();
         DiscordBot.getInstance().start();
+
     }
 
     public DefaultSyncUser getDefaultUser(String value, By by){
