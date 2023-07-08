@@ -20,7 +20,7 @@ public class TwitchBot {
     private OAuth2Credential credential;
 
     public TwitchBot(){
-        this.credential = new OAuth2Credential("896068422", Values.Twitch_AccessToken);
+        this.credential = new OAuth2Credential("168334067", Values.KenjihAccessToken);
         this.twitchClient = TwitchClientPoolBuilder.builder()
                 .withClientId(Values.Twitch_ClientId)
                 .withClientSecret(Values.Twitch_ClientSecret)
