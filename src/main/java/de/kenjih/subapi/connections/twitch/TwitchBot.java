@@ -6,7 +6,10 @@ import com.github.twitch4j.TwitchClientPool;
 import com.github.twitch4j.TwitchClientPoolBuilder;
 import com.github.twitch4j.chat.util.TwitchChatLimitHelper;
 import com.github.twitch4j.helix.domain.UserList;
+import de.kenjih.subapi.SubAPI;
+import de.kenjih.subapi.SubAPIMain;
 import de.kenjih.subapi.utils.Values;
+import org.bukkit.Bukkit;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -21,13 +24,12 @@ public class TwitchBot {
 
     public TwitchBot(){
         this.credential = new OAuth2Credential("168334067", Values.KenjihAccessToken);
+        System.out.println("AccessToken -> " + Values.getKenjihAccessToken());
         this.twitchClient = TwitchClientPoolBuilder.builder()
-                .withClientId(Values.Twitch_ClientId)
-                .withClientSecret(Values.Twitch_ClientSecret)
+                .withClientId(Values.KenjihClientId)
+                .withClientSecret(Values.KenjihClientSecret)
                 .withEnableHelix(true)
                 .withChatRateLimit(TwitchChatLimitHelper.MOD_MESSAGE_LIMIT)
-                .withChatAccount(credential)
-                .withEnableChat(true)
                 .withEnableGraphQL(true)
                 .withEnableKraken(true)
                 .withEnablePubSub(true)
